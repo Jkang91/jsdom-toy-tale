@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
     if(e.target.className === "like-button"){
       const card = e.target.closest(".card");
       let numOfLikesTag = card.querySelector('p');
-      numOfLikesTag.textContent = parseInt(numOfLikesTag.textContent) + 1 + " Likes";
+      numOfLikesTag.textContent = `${parseInt(numOfLikesTag.textContent) + 1} Likes`;
       let likeCount = numOfLikesTag.textContent;
       let toyId = card.dataset.id
       updateDb(toyId, likeCount)
